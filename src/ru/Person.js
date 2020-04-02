@@ -1,9 +1,11 @@
 const common = require('common');
-const RandomDict = require('../RandomDict');
+const RandomDictFactory = require('../randomdict/RandomDictFactory');
 
 class Person {
     constructor() {
-        this.firstName = "";
+        const rdf = RandomDictFactory.getInstance()
+        const rd = rdf.getRandomDict("data/ru/names_male.json");
+        this.firstName = rd.getValue();
     }
 
 }

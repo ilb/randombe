@@ -1,11 +1,12 @@
 const RandomDictFactory = require('../RandomDictFactory');
 const RandomDict = require('../RandomDict');
+const RandomDictConst = require('../RandomDictConst');
 
 const rdf = RandomDictFactory.getInstance()
-const rd = rdf.getRandomDict("data/ru/names_male.json");
-const rd2 = rdf.getRandomDict("data/ru/names_male.json");
-const rd3 = rdf.getRandomDict("data/ru/names_female.json");
-const rdnew = new RandomDict("data/ru/names_male.json");
+const rd = rdf.getRandomDict(RandomDictConst.DICT_RU_NAMES_MALE);
+const rd2 = rdf.getRandomDict(RandomDictConst.DICT_RU_NAMES_MALE);
+const rd3 = rdf.getRandomDict(RandomDictConst.DICT_RU_NAMES_FEMALE);
+const rdnew = new RandomDict(RandomDictConst.DICT_RU_NAMES_MALE);
 test('not same object', () => {
     expect(rd === rdnew).toBe(false);
 });
