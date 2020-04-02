@@ -1,11 +1,11 @@
-const common = require('common');
-const RandomDictFactory = require('../randomdict/RandomDictFactory');
 
 class Person {
-    constructor() {
-        const rdf = RandomDictFactory.getInstance()
-        const rd = rdf.getRandomDict("data/ru/names_male.json");
-        this.firstName = rd.getValue();
+    constructor(props) {
+        this.firstName = props.firstName;
+    }
+
+    getFirstName() {
+        return this.firstName;
     }
 
 }
