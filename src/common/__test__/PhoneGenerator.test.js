@@ -5,11 +5,11 @@ seedrandom('hello.', { global: true });
 
 
 test('getValue', () => {
-    expect(new PhoneGenerator().getValue()).toBe('49515083707');
+    expect(new PhoneGenerator().getValue()).toBe('42620787075');
 
 });
 
 test('getValuePrefix', () => {
-    expect(new PhoneGenerator({prefix: 7}).getValue()).toBe('72620787075');
+    expect(new PhoneGenerator({prefix: 7}).getValue()).toBe('75528074408');
 
 });
