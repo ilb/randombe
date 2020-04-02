@@ -11,4 +11,6 @@ test('innfl', () => {
     expect(person.getFirstName()).toBe("Кристина");
     expect(person.getMiddleName()).toBe("Максимовна");
     expect(person.getGender()).toBe(Gender.FEMALE);
+    expect(person.getInn()).toBe('066482795302');
+    
 });

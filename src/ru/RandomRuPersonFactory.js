@@ -24,6 +24,9 @@ class RandomPersonFactory {
         props.lastName = lastNameDict.getValue();
         props.middleName = middleNameDict.getValue();
         props.gender = gender;
+
+        props.inn = common.innfl();
+        
         const person = new RuPerson(props);
         return person;
     }
