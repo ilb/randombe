@@ -5,8 +5,8 @@ class RandomDict {
     }
 
     getValue() {
-        const i = Math.floor(Math.random()*this.values.length);
+        const i = Math.floor(Math.random() * this.values.length);
         return this.values[i];
     }
 }
-module.exports=RandomDict;
+module.exports = RandomDict;

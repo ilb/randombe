@@ -1,4 +1,5 @@
 const common = require('common');
+const RandomDict = require('../RandomDict');
 
 class Person {
     constructor() {
