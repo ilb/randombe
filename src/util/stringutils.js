@@ -1,13 +1,29 @@
-/* add zeros to string */
+/**
+ * add zeros to string
+ * @param {*} str string to pad 
+ * @param {*} lng pad length
+ */
 function zeros(str, lng) {
+    return leftpad(str,lng,'0');
+}
+
+/**
+ * left pad string with padchar
+ * @param {*} str string to pad 
+ * @param {*} lng pad length
+ * @param {*} padchar padding char
+ */
+function leftpad(str, lng, padchar) {
+    str = '' + str;
     var factlength = str.length;
     if (factlength < lng) {
         for (var i = 0; i < (lng - factlength); i++) {
-            str = '0' + str;
+            str = padchar + str;
         }
     }
     return str;
 }
+
 
 module.exports = {
     zeros
