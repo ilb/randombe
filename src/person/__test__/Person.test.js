@@ -1,5 +1,5 @@
 const Person = require('../Person');
 
-test('innfl', () => {
+test('person', () => {
     expect(new Person({firstName: "Иван"}).getFirstName()).toBe("Иван");
 });
