@@ -1,5 +1,5 @@
 const common = require('./common');
-const Person = require('../person/Person');
+const RuPerson = require('./RuPerson');
 const Gender = require('../person/Gender');
 const RandomDictFactory = require('../randomdict/RandomDictFactory');
 const RandomDictConst = require('../randomdict/RandomDictConst');
@@ -24,7 +24,7 @@ class RandomPersonFactory {
         props.lastName = lastNameDict.getValue();
         props.middleName = middleNameDict.getValue();
         props.gender = gender;
-        const person = new Person(props);
+        const person = new RuPerson(props);
         return person;
     }
 

@@ -1,10 +1,10 @@
-const RandomPersonFactory = require('../RandomPersonFactory');
+const RandomRuPersonFactory = require('../RandomRuPersonFactory');
 const Gender = require('../../person/Gender');
 //configure for test reproductivity 
 const seedrandom = require('seedrandom');
 seedrandom('hello.', { global: true });
 
-const rpf = new RandomPersonFactory();
+const rpf = new RandomRuPersonFactory();
 const person = rpf.getRandomPerson();
 test('innfl', () => {
     expect(person.getLastName()).toBe("Журавлева");
