@@ -1,4 +1,4 @@
 module.exports =  {
-    DICT_RU_NAMES_MALE: "data/ru/names_male.json", 
-    DICT_RU_NAMES_FEMALE: "data/ru/names_female.json"   
+    DICT_RU_FIRSTNAME_MALE: "data/ru/firstname_male.json", 
+    DICT_RU_FIRSTNAME_FEMALE: "data/ru/firstname_female.json"   
 }

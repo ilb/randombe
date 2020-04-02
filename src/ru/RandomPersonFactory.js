@@ -9,7 +9,7 @@ class RandomPersonFactory {
 
     getRandomPerson() {
         const randomDictFactory = RandomDictFactory.getInstance()
-        const rd = randomDictFactory.getRandomDict(RandomDictConst.DICT_RU_NAMES_MALE);
+        const rd = randomDictFactory.getRandomDict(RandomDictConst.DICT_RU_FIRSTNAME_MALE);
         const props={};
         props.firstName = rd.getValue();
         const person = new Person(props);

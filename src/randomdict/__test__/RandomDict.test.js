@@ -4,7 +4,7 @@ const RandomDictConst = require('../RandomDictConst');
 const seedrandom = require('seedrandom');
 seedrandom('hello.', { global: true });
 
-const rd = new RandomDict(RandomDictConst.DICT_RU_NAMES_MALE);
+const rd = new RandomDict(RandomDictConst.DICT_RU_FIRSTNAME_MALE);
 
 test('not empty string', () => {
     expect(rd.getValue()).toBe('Максим');
