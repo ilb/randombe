@@ -1,10 +1,10 @@
 const Generator = require('./Generator');
-const randomutils = require('../randomutils');
+const randomutils = require('../utils/randomutils');
 
 class FormattingNumberGenerator extends Generator {
     constructor(props) {
         super();
-        this.prefix = props.prefix || '';
+        props = props || {};
         this.length = props.length || 10;
         this.min = Math.pow(10, this.length - 1);
         this.max = Math.pow(10, this.length) - 1;
@@ -16,7 +16,8 @@ class FormattingNumberGenerator extends Generator {
     }
 
     getRawValue() {
-        return '' + this.prefix + randomutils.randomInt(this.min, this.max);
+        return '' + randomutils.randomInt(this.min, this.max);
     }
-
 }
+
+module.exports = FormattingNumberGenerator;
