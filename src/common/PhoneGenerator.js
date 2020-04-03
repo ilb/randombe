@@ -4,14 +4,13 @@ class PhoneGenerator {
 
     constructor(props) {
         props = props || {};
-        this.prefix = '' +  (props.prefix || randomutils.randomInt(1,9));
-        this.mpx = parseInt( "10000000000000".substring(0,12-this.prefix.length));
+        this.prefix = '' +  (props.prefix || randomutils.randomLength(1));
         this.formatter = props.formatter || null;
         //this.mpx = 10000000000000;
     }
 
     getValue() {
-        return this.prefix + '' +  Math.floor(Math.random()*this.mpx);
+        return this.prefix + randomutils.randomLength(11-this.prefix.length);
 
         //return this.mpx;
     }
