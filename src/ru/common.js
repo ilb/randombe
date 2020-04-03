@@ -1,6 +1,6 @@
 /* source https://codepen.io/fin-serg/pen/jzbjLd */
 
-const stringutils = require('../util/stringutils');
+const stringutils = require('../utils/stringutils');
 const zeros = stringutils.zeros;
 
 

@@ -1,4 +1,4 @@
-const randomutils = require('../util/randomutils');
+const randomutils = require('../utils/randomutils');
 
 class PhoneGenerator {
 
