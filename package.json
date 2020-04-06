@@ -1,5 +1,5 @@
 {
-  "name": "@ilb/anonymizer",
+  "name": "@ilb/randomdict",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.ilb.ru/ilb.ru/anonymizer.git"
+    "url": "https://git.ilb.ru/ilb.ru/randomdict.git"
   },
   "author": "",
   "license": "ISC",
