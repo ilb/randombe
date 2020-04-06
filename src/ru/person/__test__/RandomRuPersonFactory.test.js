@@ -1,5 +1,5 @@
 const RandomRuPersonFactory = require('../RandomRuPersonFactory');
-const Gender = require('../../person/Gender');
+const Gender = require('../../../person/Gender');
 //configure for test reproductivity 
 const seedrandom = require('seedrandom');
 seedrandom('hello.', { global: true });

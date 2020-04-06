@@ -1,4 +1,4 @@
-const Person = require('../person/Person');
+const Person = require('../../person/Person');
 
 class RuPerson extends Person {
 

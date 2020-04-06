@@ -1,8 +1,8 @@
-const common = require('./common');
+const common = require('../common/common');
 const RuPerson = require('./RuPerson');
-const Gender = require('../person/Gender');
-const RandomDictFactory = require('../randomdict/RandomDictFactory');
-const RandomDictConst = require('../randomdict/RandomDictConst');
+const Gender = require('../../person/Gender');
+const RandomDictFactory = require('../../randomdict/RandomDictFactory');
+const RandomDictConst = require('../../randomdict/RandomDictConst');
 
 class RandomRuPersonFactory {
     constructor() {
