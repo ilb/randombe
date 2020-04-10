@@ -1,7 +1,6 @@
 class RandomDict {
-    constructor(file) {
-        var fs = require('fs');
-        this.values = JSON.parse(fs.readFileSync(file, 'utf8'));
+    constructor(values) {
+        this.values = values;
     }
 
     getValue() {

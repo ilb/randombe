@@ -1,4 +1,5 @@
 const RandomDict = require('./RandomDict');
+const RandomDictReader = require('./RandomDictReader');
 
 class RandomDictFactory {
 
@@ -13,7 +14,9 @@ class RandomDictFactory {
     }
     getRandomDict(file) {
         if (!this.dictionaries[file]) {
-            this.dictionaries[file] = new RandomDict(file);
+            const reader = new RandomDictReader();
+            const values = reader.getValues(file);            
+            this.dictionaries[file] = new RandomDict(values);
         }
         return this.dictionaries[file];
     }
