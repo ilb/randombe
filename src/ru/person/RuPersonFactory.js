@@ -26,7 +26,6 @@ class RuPersonFactory {
         props.gender = gender;
 
         props.inn = common.innfl();
-        props.fio = props.lastName + ' ' + props.firstName + ' ' + props.middleName;
 
         const person = new RuPerson(props);
         return person;
