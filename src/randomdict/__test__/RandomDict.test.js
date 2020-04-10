@@ -19,8 +19,8 @@ const params = [
   { dict: 'DICT_RU_MIDDLENAME_FEMALE', value: 'Ивановна' },
   { dict: 'DICT_RU_LASTNAME_MALE', value: 'Иванов' },
   { dict: 'DICT_RU_LASTNAME_FEMALE', value: 'Иванова' },
-  { dict: 'DICT_RU_FAMILY_STATUS', value: 'Женат/замужем' },
-  { dict: 'DICT_RU_REGION_KLADR_TYPE', value: 'УДМУРТСКАЯ РЕСП' },
+  { dict: 'DICT_RU_MARTIAL_STATUS', value: 'Женат/замужем' },
+  { dict: 'DICT_RU_EDUCATION_LEVEL', value: 'Высшее' },
 ];
 
 // проверяем что у нас в словарях то что нужно
