@@ -21,6 +21,10 @@ class Person {
         return this.gender;
     }
 
+    getFullName() {
+      return this.lastName + ' ' + this.firstName + ' ' + this.middleName;
+    }
+
 }
 
 module.exports = Person;

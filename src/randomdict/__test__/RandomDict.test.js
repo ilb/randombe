@@ -20,13 +20,13 @@ const params = [
   { dict: 'DICT_RU_LASTNAME_MALE', value: 'Иванов' },
   { dict: 'DICT_RU_LASTNAME_FEMALE', value: 'Иванова' },
   { dict: 'DICT_RU_FAMILY_STATUS', value: 'Женат/замужем' },
+  { dict: 'DICT_RU_REGION_KLADR_TYPE', value: 'УДМУРТСКАЯ РЕСП' },
 ];
 
 // проверяем что у нас в словарях то что нужно
-test('family_status', () => {
+test('test', () => {
   params && params.forEach(param => {
-    const randic = new RandomDict(RandomDictConst[param.dict]);
-    const conteiner = randic.values;
-    expect(conteiner).toContain(param.value);
+    const rd = new RandomDict(RandomDictConst[param.dict]);
+    expect(rd.getValue()).toBe(param.value);
   });
 });
