@@ -17,17 +17,18 @@ const rdf = RandomDictFactory.getInstance();
 // });
 
 const params = [
-  { dict: 'DICT_RU_FIRSTNAME_MALE', value: 'Геннадий' },
-  { dict: 'DICT_RU_FIRSTNAME_FEMALE', value: 'Жанна' },
-  { dict: 'DICT_RU_MIDDLENAME_MALE', value: 'Васильевич' },
-  { dict: 'DICT_RU_MIDDLENAME_FEMALE', value: 'Константиновна' },
-  { dict: 'DICT_RU_LASTNAME_MALE', value: 'Бойко' },
-  { dict: 'DICT_RU_LASTNAME_FEMALE', value: 'Дмитриева' },
-  { dict: 'DICT_RU_FAMILY_STATUS', value: 'Холост/холоста' },
+  { dict: 'DICT_RU_FIRSTNAME_MALE', value: 'Алексей' },
+  { dict: 'DICT_RU_FIRSTNAME_FEMALE', value: 'Валентина' },
+  { dict: 'DICT_RU_MIDDLENAME_MALE', value: 'Владиславович' },
+  { dict: 'DICT_RU_MIDDLENAME_FEMALE', value: 'Артемовна' },
+  { dict: 'DICT_RU_LASTNAME_MALE', value: 'Гурьев' },
+  { dict: 'DICT_RU_LASTNAME_FEMALE', value: 'Макарова' },
+  { dict: 'DICT_RU_MARTIAL_STATUS', value: 'Женат/замужем' },
+  { dict: 'DICT_RU_EDUCATION_LEVEL', value: 'Неполное высшее' },
 ];
 
 // проверяем что у нас в словарях то что нужно
-test('family_status', () => {
+test('test', () => {
   params && params.forEach(param => {
     const randomDict = rdf.getRandomDict(RandomDictConst[param.dict]);
     const value = randomDict.getValue();
