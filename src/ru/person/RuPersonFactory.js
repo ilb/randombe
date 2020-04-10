@@ -4,7 +4,7 @@ const Gender = require('../../person/Gender');
 const RandomDictFactory = require('../../randomdict/RandomDictFactory');
 const RandomDictConst = require('../../randomdict/RandomDictConst');
 
-class RandomRuPersonFactory {
+class RuPersonFactory {
     constructor() {
     }
 
@@ -33,4 +33,4 @@ class RandomRuPersonFactory {
 
 }
 
-module.exports = RandomRuPersonFactory;
+module.exports = RuPersonFactory;
