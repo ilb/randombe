@@ -10,6 +10,18 @@ class RuPerson extends Person {
     getInn() {
         return this.inn;
     }
+
+    getFirstName() {
+        return this.firstName;
+    }
+
+    getFio() {
+        return this.fio;
+    }
+
+    getGender() {
+        return this.gender;
+    }
 }
 
 module.exports = RuPerson;
