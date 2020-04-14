@@ -26,8 +26,18 @@ function randomLength(length) {
   return randomInt(min, max);
 }
 
+/**
+ * random date
+ * @param {Date} start 
+ * @param {Date} end 
+ */
+function randomDate(start, end) {
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
 module.exports = {
   randomFloat,
   randomInt,
-  randomLength
+  randomLength,
+  randomDate
 }
