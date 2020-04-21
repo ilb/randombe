@@ -1,8 +1,8 @@
-const translit = require('../translit');
+const {rus_to_latin} = require('../translit');
 
 test('rus_to_latin', () => {
 
-    expect(translit.rus_to_latin('Экскаватор')).toBe("Ekskavator");
+    expect(rus_to_latin('Экскаватор')).toBe("Ekskavator");
     
     
 });

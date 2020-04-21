@@ -1,9 +1,9 @@
 /**
- * add zeros to string
+ * add leftpad0 to string
  * @param {*} str string to pad 
  * @param {*} lng pad length
  */
-function zeros(str, lng) {
+function leftpad0(str, lng) {
     return leftpad(str,lng,'0');
 }
 
@@ -26,5 +26,5 @@ function leftpad(str, lng, padchar) {
 
 
 module.exports = {
-    zeros
+    leftpad0
 }

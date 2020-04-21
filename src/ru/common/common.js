@@ -1,14 +1,14 @@
 /* source https://codepen.io/fin-serg/pen/jzbjLd */
 
 const stringutils = require('../../utils/stringutils');
-const zeros = stringutils.zeros;
+const leftpad0 = stringutils.leftpad0;
 
 
 /* INN FL */
 function innfl() {
-    var region = zeros(String(Math.floor((Math.random() * 92) + 1)),2);
-    var inspection = zeros(String(Math.floor((Math.random() * 99) + 1)),2);
-    var numba = zeros(String(Math.floor((Math.random() * 999999) + 1)),6);
+    var region = leftpad0(String(Math.floor((Math.random() * 92) + 1)),2);
+    var inspection = leftpad0(String(Math.floor((Math.random() * 99) + 1)),2);
+    var numba = leftpad0(String(Math.floor((Math.random() * 999999) + 1)),6);
     var rezult = region + inspection + numba;
     var kontr = String(((
             7*rezult[0] + 2*rezult[1] + 4*rezult[2] +
@@ -31,9 +31,9 @@ function innfl() {
 
 /* INN UL */
 function innul() {
-    var region = zeros(String(Math.floor((Math.random() * 92) + 1)),2);
-    var inspection = zeros(String(Math.floor((Math.random() * 99) + 1)),2);
-    var numba = zeros(String(Math.floor((Math.random() * 99999) + 1)),5);
+    var region = leftpad0(String(Math.floor((Math.random() * 92) + 1)),2);
+    var inspection = leftpad0(String(Math.floor((Math.random() * 99) + 1)),2);
+    var numba = leftpad0(String(Math.floor((Math.random() * 99999) + 1)),5);
     var rezult = region + inspection + numba;
     var kontr = String(((
             2*rezult[0] + 4*rezult[1] + 10*rezult[2] +
@@ -48,10 +48,10 @@ function innul() {
 /* OGRN */
 function ogrn() {
     var priznak = String(Math.floor((Math.random() * 9) + 1));
-    var godreg = zeros(String(Math.floor((Math.random() * 16) + 1)),2);
-    var region = zeros(String(Math.floor((Math.random() * 92) + 1)),2);
-    var inspection = zeros(String(Math.floor((Math.random() * 99) + 1)),2);
-    var zapis = zeros(String(Math.floor((Math.random() * 99999) + 1)),5);
+    var godreg = leftpad0(String(Math.floor((Math.random() * 16) + 1)),2);
+    var region = leftpad0(String(Math.floor((Math.random() * 92) + 1)),2);
+    var inspection = leftpad0(String(Math.floor((Math.random() * 99) + 1)),2);
+    var zapis = leftpad0(String(Math.floor((Math.random() * 99999) + 1)),5);
     var rezult = priznak + godreg + region + inspection + zapis;
     var kontr = String(((rezult) % 11) % 10);
     kontr == 10 ? kontr = 0: kontr = kontr;
@@ -61,8 +61,8 @@ function ogrn() {
 
 /* KPP */
 function kpp() {
-    var region = zeros(String(Math.floor((Math.random() * 92) + 1)),2);
-    var inspection = zeros(String(Math.floor((Math.random() * 99) + 1)),2);
+    var region = leftpad0(String(Math.floor((Math.random() * 92) + 1)),2);
+    var inspection = leftpad0(String(Math.floor((Math.random() * 99) + 1)),2);
     var prichina = Math.floor((Math.random() * 4) + 1);
     switch (prichina) {
         case 1:
@@ -81,16 +81,16 @@ function kpp() {
         prichina = '01';
         break
     }
-    var numba = zeros(String(Math.floor((Math.random() * 999) + 1)),3);
+    var numba = leftpad0(String(Math.floor((Math.random() * 999) + 1)),3);
     var rezult = region + inspection + prichina + numba;
     return rezult;
 }
 
 /* SNILS */
 function snils() {
-    var rand1 = zeros(String(Math.floor((Math.random() * 998) + 2)),3);
-    var rand2 = zeros(String(Math.floor((Math.random() * 999) + 1)),3);
-    var rand3 = zeros(String(Math.floor((Math.random() * 999) + 1)),3);
+    var rand1 = leftpad0(String(Math.floor((Math.random() * 998) + 2)),3);
+    var rand2 = leftpad0(String(Math.floor((Math.random() * 999) + 1)),3);
+    var rand3 = leftpad0(String(Math.floor((Math.random() * 999) + 1)),3);
     var rezult = rand1 + rand2 + rand3;
     var kontr = String(9*rezult[0] + 8*rezult[1] + 7*rezult[2] +
                 6*rezult[3] + 5*rezult[4] + 4*rezult[5] +
@@ -100,7 +100,7 @@ function snils() {
     }
     else if (kontr > 101) {
         kontr = String(kontr % 101);
-        kontr = zeros(kontr,2);
+        kontr = leftpad0(kontr,2);
         if (kontr > 99) {
             kontr = '00';
         }
@@ -147,9 +147,9 @@ function iin() {
     var kontr = '10';
     while (kontr == '10') {
         var sex = String(Math.floor((Math.random() * 2))); /* 0 -> male, 1 -> female */
-        var birth_yy = zeros(String(Math.floor((Math.random() * 100))),2); /* 00..99 */
-        var birth_mm = zeros(String(Math.floor((Math.random() * 12) + 1)),2); /* 01..12 */
-        var birth_dd = zeros(String(Math.floor((Math.random() * 28) + 1)),2); /* 01..28 */
+        var birth_yy = leftpad0(String(Math.floor((Math.random() * 100))),2); /* 00..99 */
+        var birth_mm = leftpad0(String(Math.floor((Math.random() * 12) + 1)),2); /* 01..12 */
+        var birth_dd = leftpad0(String(Math.floor((Math.random() * 28) + 1)),2); /* 01..28 */
         var century = 20;
         if (Math.floor(birth_yy) <= 18 && Math.floor(birth_yy) > 0) {
             century = 21;
@@ -160,7 +160,7 @@ function iin() {
         var seventh = 3 + Math.floor(sex);
         if (century == 21) {seventh = seventh + 2};
         seventh = String(seventh);
-        var justice = zeros(String(Math.floor((Math.random() * 9999) + 1)),4);
+        var justice = leftpad0(String(Math.floor((Math.random() * 9999) + 1)),4);
         rezult = birth_yy + birth_mm + birth_dd + seventh + justice;
         kontr = String((
                 1*rezult[0] + 2*rezult[1] + 3*rezult[2] +
