@@ -6,12 +6,15 @@ seedrandom('hello.', { global: true });
 
 const rpf = new RuPersonGenerator();
 const person = rpf.getValue();
-test('innfl', () => {
-    expect(person.lastName).toBe("Журавлева");
-    expect(person.firstName).toBe("Кристина");
-    expect(person.middleName).toBe("Максимовна");
-    expect(person.fullName).toBe("Журавлева Кристина Максимовна");
-    expect(person.gender).toBe(GenderGenerator.FEMALE);
-    expect(person.inn).toBe('066482795302');
+const expected = {
+    "lastName": "Журавлева",
+    "firstName": "Кристина",
+    "middleName": "Максимовна",
+    "fullName": "Журавлева Кристина Максимовна",
+    "inn":"066482795302",
+    "gender": GenderGenerator.FEMALE,
+};
+test('generate person', () => {
+    expect(person).toStrictEqual(expected);
     
 });
