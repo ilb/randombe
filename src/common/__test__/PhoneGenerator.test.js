@@ -6,7 +6,7 @@ seedrandom('hello.', { global: true });
 
 
 test('getValue', () => {
-    expect(new PhoneGenerator().getValue()).toBe('+54563575335');
+    expect(new PhoneGenerator().getValue()).toBe('+54563575336');
 
 });
 

@@ -9,11 +9,12 @@ function randomFloat(min, max) {
 
 /**
  * random int value
+ * @see https://learn.javascript.ru/task/random-int-min-max
  * @param {*} min minimum value 
  * @param {*} max maximum value
  */
 function randomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max + 1 - min)) + min;
 }
 
 /**
