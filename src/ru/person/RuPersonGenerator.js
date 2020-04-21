@@ -2,6 +2,7 @@ const common = require('../common/common');
 const GenderGenerator = require('../../common/GenderGenerator');
 const RandomDictFactory = require('../../randomdict/RandomDictFactory');
 const RandomDictConst = require('../../randomdict/RandomDictConst');
+const PassportGenerator = require('../common/PassportGenerator');
 
 class RuPersonGenerator {
     constructor() {
@@ -26,6 +27,9 @@ class RuPersonGenerator {
         person.gender = gender;
 
         person.inn = common.innfl();
+
+        const passportGenerator = new PassportGenerator();
+        person.passport = passportGenerator.getValue();
 
         return person;
     }

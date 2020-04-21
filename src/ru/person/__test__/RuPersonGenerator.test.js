@@ -11,10 +11,16 @@ const expected = {
     "firstName": "Кристина",
     "middleName": "Максимовна",
     "fullName": "Журавлева Кристина Максимовна",
-    "inn":"066482795302",
+    "inn": "066482795302",
     "gender": GenderGenerator.FEMALE,
+    "passport": {
+        "docDate": "2018-05-21",
+        "docNumber": "81 91 212945",
+        "orgCode": "180-000",
+        "orgName": "ОТДЕЛОМ УФМС РОССИИ",
+    }
 };
 test('generate person', () => {
     expect(person).toStrictEqual(expected);
-    
+
 });
