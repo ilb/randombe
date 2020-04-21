@@ -10,6 +10,7 @@ test('innfl', () => {
     expect(person.lastName).toBe("Журавлева");
     expect(person.firstName).toBe("Кристина");
     expect(person.middleName).toBe("Максимовна");
+    expect(person.fullName).toBe("Журавлева Кристина Максимовна");
     expect(person.gender).toBe(GenderGenerator.FEMALE);
     expect(person.inn).toBe('066482795302');
     

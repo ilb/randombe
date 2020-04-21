@@ -22,6 +22,7 @@ class RuPersonGenerator {
         person.firstName = firstNameDict.getValue();
         person.lastName = lastNameDict.getValue();
         person.middleName = middleNameDict.getValue();
+        person.fullName = person.lastName + ' ' + person.firstName + ' ' + person.middleName;
         person.gender = gender;
 
         person.inn = common.innfl();
